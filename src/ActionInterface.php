@@ -1,6 +1,6 @@
 <?php
 
-namespace Shadowhand\Adr\Handler;
+namespace Spark\Adr\Handler;
 
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;

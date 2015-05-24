@@ -1,6 +1,6 @@
 <?php
 
-namespace Shadowhand\Adr;
+namespace Spark\Adr;
 
 /**
  * Value object that carries the payload from the domain.

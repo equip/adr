@@ -1,6 +1,6 @@
 <?php
 
-namespace Shadowhand\Adr;
+namespace Spark\Adr;
 
 interface DomainInterface
 {

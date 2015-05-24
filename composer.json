@@ -1,16 +1,20 @@
 {
-    "name": "shadowhand/adr",
+    "name": "sparkphp/adr",
     "description": "Intefaces for Action Domain Responder pattern",
     "license": "MIT",
     "authors": [
         {
             "name": "Woody Gilk",
             "email": "woody.gilk@gmail.com"
+        },
+        {
+            "name": "Daniel Olfelt",
+            "email": "dolfelt@gmail.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "Shadowhand\\Adr\\": "src/"
+            "Spark\\Adr\\": "src/"
         }
     },
     "require": {
