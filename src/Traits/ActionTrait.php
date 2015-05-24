@@ -1,0 +1,82 @@
+<?php
+
+namespace Spark\Adr\Traits;
+
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Message\ResponseInterface;
+use Spark\Adr\DomainInterface;
+use Spark\Adr\InputInterface;
+use Spark\Adr\PayloadInterface;
+use Spark\Adr\ResponderInterface;
+use Spark\Adr\RouteInterface;
+
+trait ActionTrait
+{
+    /**
+     * @param  RouteInterface $route
+     * @return DomainInterface
+     */
+    abstract protected function getDomain(RouteInterface $route);
+
+    /**
+     * @param  RouteInterface $route
+     * @return InputInterface
+     */
+    abstract protected function getInput(RouteInterface $input);
+
+    /**
+     * @param  RouteInterface $route
+     * @return ResponderInterface
+     */
+    abstract protected function getResponder(RouteInterface $route);
+
+    // implements ActionInterface
+    public function __invoke(
+        ServerRequestInterface $request,
+        ResponseInterface      $response,
+        RouteInterface         $route
+    ) {
+        $domain    = $route->getDomain();
+        $input     = $route->getInput();
+        $responder = $route->getResponder();
+
+        $payload  = $this->getPayload($domain, $input, $request);
+        $response = $this->getResponse($responder, $request, $response, $payload);
+
+        return $response;
+    }
+
+    /**
+     * Execute the domain to get a payload.
+     *
+     * @param  DomainInterface        $domain
+     * @param  InputInterface         $input
+     * @param  ServerRequestInterface $request
+     * @return PayloadInterface
+     */
+    private function getPayload(
+        DomainInterface        $domain,
+        InputInterface         $input,
+        ServerRequestInterface $request
+    ) {
+        return $domain($input($request));
+    }
+
+    /**
+     * Execute the responder to marshall the reponse.
+     *
+     * @param  ResponderInterface     $responder
+     * @param  ServerRequestInterface $request
+     * @param  ResponseInterface      $response
+     * @param  PayloadInterface       $payload
+     * @return ResponseInterface
+     */
+    private function getResponse(
+        ResponderInterface     $responder,
+        ServerRequestInterface $request,
+        ResponseInterface      $response,
+        PayloadInterface       $payload
+    ) {
+        return $responder($request, $response, $payload);
+    }
+}
