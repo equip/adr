@@ -1,6 +1,6 @@
 <?php
 
-namespace Spark\Adr\Handler;
+namespace Spark\Adr;
 
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
