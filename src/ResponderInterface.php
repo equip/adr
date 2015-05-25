@@ -2,6 +2,7 @@
 
 namespace Spark\Adr;
 
+use Aura\Payload_Interface\PayloadInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
