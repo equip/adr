@@ -1,18 +1,12 @@
 <?php
 
-namespace Spark\Adr\Traits;
+namespace Spark\Adr;
 
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use Spark\Adr\DomainInterface;
-use Spark\Adr\InputInterface;
-use Spark\Adr\PayloadInterface;
-use Spark\Adr\ResponderInterface;
-use Spark\Adr\RouteInterface;
 
-trait ActionTrait
+class ActionHandler implements ActionInterface
 {
-    // implements ActionInterface
     public function __invoke(
         ServerRequestInterface $request,
         ResponseInterface      $response,
