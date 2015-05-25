@@ -12,24 +12,6 @@ use Spark\Adr\RouteInterface;
 
 trait ActionTrait
 {
-    /**
-     * @param  RouteInterface $route
-     * @return DomainInterface
-     */
-    abstract protected function getDomain(RouteInterface $route);
-
-    /**
-     * @param  RouteInterface $route
-     * @return InputInterface
-     */
-    abstract protected function getInput(RouteInterface $input);
-
-    /**
-     * @param  RouteInterface $route
-     * @return ResponderInterface
-     */
-    abstract protected function getResponder(RouteInterface $route);
-
     // implements ActionInterface
     public function __invoke(
         ServerRequestInterface $request,
