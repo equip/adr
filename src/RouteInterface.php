@@ -5,17 +5,32 @@ namespace Spark\Adr;
 interface RouteInterface
 {
     /**
-     * @return DomainInterface
+     * @param $domain string|DomainInterface
+     */
+    public function setDomain($domain);
+
+    /**
+     * @param $input string|InputInterface
+     */
+    public function setInput($input);
+
+    /**
+     * @param $responder string|ResponderInterface
+     */
+    public function setResponder($responder);
+
+    /**
+     * @return string|DomainInterface
      */
     public function getDomain();
 
     /**
-     * @return InputInterface
+     * @return string|InputInterface
      */
     public function getInput();
 
     /**
-     * @return ResponderInterface
+     * @return string|ResponderInterface
      */
     public function getResponder();
 }
