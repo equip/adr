@@ -1,6 +1,6 @@
 {
     "name": "sparkphp/adr",
-    "description": "Intefaces for Action Domain Responder pattern",
+    "description": "Interfaces for Action Domain Responder pattern",
     "license": "MIT",
     "authors": [
         {
