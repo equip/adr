@@ -18,7 +18,6 @@
         }
     },
     "require": {
-        "aura/payload-interface": "3.*@dev",
         "psr/http-message": "^1.0"
     }
 }
