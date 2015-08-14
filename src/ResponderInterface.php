@@ -18,6 +18,6 @@ interface ResponderInterface
     public function __invoke(
         ServerRequestInterface $request,
         ResponseInterface      $response,
-        PayloadInterface       $payload = null
+        PayloadInterface       $payload
     );
 }
