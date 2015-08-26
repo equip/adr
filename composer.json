@@ -19,6 +19,6 @@
     },
     "require": {
         "psr/http-message": "^1.0",
-        "sparkphp/domain": "~0.1"
+        "sparkphp/domain": "~0.2"
     }
 }
