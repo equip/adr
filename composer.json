@@ -17,6 +17,9 @@
             "Spark\\Adr\\": "src/"
         }
     },
+    "conflict": {
+        "sparkphp/domain": "*"
+    },
     "require": {
         "psr/http-message": "^1.0"
     }
