@@ -1,26 +1,20 @@
 {
-    "name": "sparkphp/adr",
+    "name": "equip/adr",
     "description": "Interfaces for Action Domain Responder pattern",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Woody Gilk",
-            "email": "woody.gilk@gmail.com"
-        },
-        {
-            "name": "Daniel Olfelt",
-            "email": "dolfelt@gmail.com"
+            "name": "Equip Contributors",
+            "homepage": "https://github.com/equip"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "Spark\\Adr\\": "src/"
-        }
-    },
-    "conflict": {
-        "sparkphp/domain": "*"
-    },
     "require": {
         "psr/http-message": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Equip\\Adr\\": "src/"
+        }
     }
 }
