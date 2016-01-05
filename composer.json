@@ -9,6 +9,9 @@
             "homepage": "https://github.com/equip"
         }
     ],
+    "replaces": {
+        "sparkphp/adr": "self.version"
+    },
     "require": {
         "psr/http-message": "^1.0"
     },
