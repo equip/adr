@@ -85,6 +85,11 @@ interface PayloadInterface
     const STATUS_NOT_FOUND = 'Not Found';
 
     /**
+     * @var string
+     */
+    const STATUS_INTERNAL_SERVER_ERROR = 'Internal Server Error';
+
+    /**
      * Create a copy of the payload with the status.
      *
      * @param string $status
