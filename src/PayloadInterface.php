@@ -2,7 +2,7 @@
 
 namespace Equip\Adr;
 
-interface PayloadInterface
+interface PayloadInterface extends Status
 {
     /**
      * @var integer All good.
@@ -30,75 +30,20 @@ interface PayloadInterface
     const UNKNOWN = 40;
 
     /**
-     * @var string
-     */
-    const STATUS_OK = 'OK';
-
-    /**
-     * @var string
-     */
-    const STATUS_CREATED = 'Created';
-
-    /**
-     * @var string
-     */
-    const STATUS_ACCEPTED = 'Accepted';
-
-    /**
-     * @var string
-     */
-    const STATUS_NO_CONTENT = 'No Content';
-
-    /**
-     * @var string
-     */
-    const STATUS_MOVED_PERMANENTLY = 'Moved Permanently';
-
-    /**
-     * @var string
-     */
-    const STATUS_FOUND = 'Found';
-
-    /**
-     * @var string
-     */
-    const STATUS_NOT_MODIFIED = 'Not Modified';
-
-    /**
-     * @var string
-     */
-    const STATUS_BAD_REQUEST = 'Bad Request';
-
-    /**
-     * @var string
-     */
-    const STATUS_UNAUTHORIZED = 'Unauthorized';
-
-    /**
-     * @var string
-     */
-    const STATUS_FORBIDDEN = 'Forbidden';
-
-    /**
-     * @var string
-     */
-    const STATUS_NOT_FOUND = 'Not Found';
-
-    /**
-     * @var string
-     */
-    const STATUS_INTERNAL_SERVER_ERROR = 'Internal Server Error';
-
-    /**
      * Create a copy of the payload with the status.
      *
+     * @see \Equip\Adr\Status
+     *
      * @param string $status
+     *
      * @return PayloadInterface
      */
     public function withStatus($status);
 
     /**
      * Get the status of the payload.
+     *
+     * @see \Equip\Adr\Status
      *
      * @return string
      */
@@ -108,6 +53,7 @@ interface PayloadInterface
      * Create a copy of the payload with input array.
      *
      * @param array $input
+     *
      * @return PayloadInterface
      */
     public function withInput(array $input);
@@ -123,6 +69,7 @@ interface PayloadInterface
      * Create a copy of the payload with output array.
      *
      * @param array $output
+     *
      * @return PayloadInterface
      */
     public function withOutput(array $output);
@@ -138,6 +85,7 @@ interface PayloadInterface
      * Create a copy of the payload with messages array.
      *
      * @param array $output
+     *
      * @return PayloadInterface
      */
     public function withMessages(array $messages);
