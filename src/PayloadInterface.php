@@ -5,31 +5,6 @@ namespace Equip\Adr;
 interface PayloadInterface extends Status
 {
     /**
-     * @var integer All good.
-     * @deprecated 1.1.0
-     * @see \Equip\Adr\PayloadInterface::STATUS_OK
-     */
-    const OK = 10;
-
-    /**
-     * @var integer Error during domain processing.
-     * @deprecated 1.1.0
-     */
-    const ERROR = 20;
-
-    /**
-     * @var integer Invalid domain input.
-     * @deprecated 1.1.0
-     */
-    const INVALID = 30;
-
-    /**
-     * @var integer Unknown domain state.
-     * @deprecated 1.1.0
-     */
-    const UNKNOWN = 40;
-
-    /**
      * Create a copy of the payload with the status.
      *
      * @see \Equip\Adr\Status
