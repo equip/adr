@@ -71,4 +71,39 @@ interface PayloadInterface extends Status
      * @return array
      */
     public function getMessages();
+
+    /**
+     * Create a copy of the payload with a modified setting.
+     *
+     * @param string $name
+     * @param mixed $value
+     *
+     * @return static
+     */
+    public function withSetting($name, $value);
+
+    /**
+     * Create a copy of the payload without a setting.
+     *
+     * @param string $name
+     *
+     * @return static
+     */
+    public function withoutSetting($name);
+
+    /**
+     * Get a payload setting.
+     *
+     * @param string $name
+     *
+     * @return mixed
+     */
+    public function getSetting($name);
+
+    /**
+     * Get all payload settings.
+     *
+     * @return array
+     */
+    public function getSettings();
 }
