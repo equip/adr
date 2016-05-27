@@ -7,6 +7,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 _..._
 
+## 2.0.0-alpha2 - 2016-05-11
+
+- Added settings methods to `PayloadInterface`
+
+## 2.0.0-alpha1 - 2016-05-07
+
+- Removed deprecated `PayloadInterface` status constants
+
 ## 1.2.0 - 2016-01-19
 
 - Added `STATUS_INTERNAL_SERVER_ERROR` for Payload
