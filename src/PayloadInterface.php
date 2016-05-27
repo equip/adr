@@ -78,7 +78,7 @@ interface PayloadInterface extends Status
      * @param string $name
      * @param mixed $value
      *
-     * @return static
+     * @return PayloadInterface
      */
     public function withSetting($name, $value);
 
@@ -87,7 +87,7 @@ interface PayloadInterface extends Status
      *
      * @param string $name
      *
-     * @return static
+     * @return PayloadInterface
      */
     public function withoutSetting($name);
 
